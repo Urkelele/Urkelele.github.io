@@ -20,7 +20,6 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-
 html { scroll-behavior: smooth; }
 
 body {
@@ -45,7 +44,6 @@ nav {
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
 }
-
 .nav-logo {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 1.4rem;
@@ -53,13 +51,7 @@ nav {
   color: var(--text);
   text-decoration: none;
 }
-
-.nav-links {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-}
-
+.nav-links { display: flex; gap: 2rem; list-style: none; }
 .nav-links a {
   color: var(--muted);
   text-decoration: none;
@@ -80,206 +72,64 @@ nav {
   position: relative;
   overflow: hidden;
 }
-
 .hero-bg {
-  position: absolute;
-  inset: 0;
+  position: absolute; inset: 0;
   background-image: url('images/EndlessFortress.png');
   background-size: cover;
   background-position: center 30%;
   filter: brightness(0.25) saturate(0.6);
   z-index: 0;
 }
-
 .hero-gradient {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, 
-    rgba(13,13,15,0.2) 0%, 
-    rgba(13,13,15,0.0) 30%,
-    rgba(13,13,15,0.85) 80%,
-    rgba(13,13,15,1) 100%);
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom,
+    rgba(13,13,15,0.2) 0%, rgba(13,13,15,0.0) 30%,
+    rgba(13,13,15,0.85) 80%, rgba(13,13,15,1) 100%);
   z-index: 1;
 }
+.hero-content { position: relative; z-index: 2; max-width: 900px; }
+.hero-label { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
+.hero-name { font-family: 'Bebas Neue', sans-serif; font-size: clamp(4rem, 10vw, 9rem); line-height: 0.9; letter-spacing: 0.02em; color: var(--text); margin-bottom: 1.5rem; }
+.hero-name span { color: var(--accent); }
+.hero-bio { font-family: 'Instrument Serif', serif; font-size: 1.2rem; font-style: italic; color: var(--muted); max-width: 560px; margin-bottom: 2.5rem; line-height: 1.6; }
+.hero-links { display: flex; gap: 1rem; flex-wrap: wrap; }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 900px;
-}
-
-.hero-label {
-  font-size: 11px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 1rem;
-}
-
-.hero-name {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(4rem, 10vw, 9rem);
-  line-height: 0.9;
-  letter-spacing: 0.02em;
-  color: var(--text);
-  margin-bottom: 1.5rem;
-}
-
-.hero-name span {
-  color: var(--accent);
-}
-
-.hero-bio {
-  font-family: 'Instrument Serif', serif;
-  font-size: 1.2rem;
-  font-style: italic;
-  color: var(--muted);
-  max-width: 560px;
-  margin-bottom: 2.5rem;
-  line-height: 1.6;
-}
-
-.hero-links {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
+/* ── BUTTONS ── */
 .btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
+  display: inline-flex; align-items: center; gap: 0.5rem;
   padding: 0.7rem 1.4rem;
-  font-family: 'DM Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  text-decoration: none;
-  border: 1px solid var(--border);
-  color: var(--text);
-  transition: all 0.2s;
-  background: transparent;
-  cursor: pointer;
+  font-family: 'DM Mono', monospace; font-size: 11px;
+  letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none;
+  border: 1px solid var(--border); color: var(--text);
+  transition: all 0.2s; background: transparent; cursor: pointer;
 }
-
-.btn-primary {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: white;
-}
-
+.btn-primary { background: var(--accent); border-color: var(--accent); color: white; }
 .btn:hover { border-color: var(--text); background: rgba(255,255,255,0.05); }
 .btn-primary:hover { background: #a8341f; border-color: #a8341f; }
 
 /* ── SECTIONS ── */
-section {
-  padding: 6rem 3rem;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.section-label {
-  font-size: 11px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 0.5rem;
-}
-
-.section-title {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  letter-spacing: 0.03em;
-  color: var(--text);
-  margin-bottom: 4rem;
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 1rem;
-}
+section { padding: 6rem 3rem; max-width: 1100px; margin: 0 auto; }
+.section-label { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
+.section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 5vw, 4rem); letter-spacing: 0.03em; color: var(--text); margin-bottom: 4rem; border-bottom: 1px solid var(--border); padding-bottom: 1rem; }
 
 /* ── PROJECT CARD ── */
-.project {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  padding: 3rem 0;
-  border-bottom: 1px solid var(--border);
-  align-items: start;
-}
-
+.project { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; padding: 3rem 0; border-bottom: 1px solid var(--border); align-items: start; }
 .project:last-child { border-bottom: none; }
-
 .project.reverse { direction: rtl; }
 .project.reverse > * { direction: ltr; }
+.project-meta { display: flex; flex-direction: column; gap: 1.2rem; position: sticky; top: 5rem; }
+.project-number { font-size: 11px; color: var(--muted); letter-spacing: 0.1em; }
+.project-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 3.5vw, 3rem); letter-spacing: 0.03em; color: var(--text); line-height: 1.1; }
+.project-type { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent2); }
+.project-desc { font-family: 'Instrument Serif', serif; font-size: 1.05rem; color: var(--muted); line-height: 1.7; }
+.project-desc b { color: var(--text); font-style: italic; }
+.skills-label { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem; }
+.skills-list { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.skill-tag { padding: 0.25rem 0.7rem; background: var(--tag-bg); border: 1px solid var(--border); color: var(--tag-text); font-size: 11px; letter-spacing: 0.05em; }
+.project-links { display: flex; gap: 0.7rem; flex-wrap: wrap; }
 
-.project-meta {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-  position: sticky;
-  top: 5rem;
-}
-
-.project-number {
-  font-size: 11px;
-  color: var(--muted);
-  letter-spacing: 0.1em;
-}
-
-.project-title {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(2rem, 3.5vw, 3rem);
-  letter-spacing: 0.03em;
-  color: var(--text);
-  line-height: 1.1;
-}
-
-.project-type {
-  font-size: 11px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--accent2);
-}
-
-.project-desc {
-  font-family: 'Instrument Serif', serif;
-  font-size: 1.05rem;
-  color: var(--muted);
-  line-height: 1.7;
-}
-
-.project-desc b {
-  color: var(--text);
-  font-style: italic;
-}
-
-.skills-label {
-  font-size: 10px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 0.5rem;
-}
-
-.skills-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-}
-
-.skill-tag {
-  padding: 0.25rem 0.7rem;
-  background: var(--tag-bg);
-  border: 1px solid var(--border);
-  color: var(--tag-text);
-  font-size: 11px;
-  letter-spacing: 0.05em;
-}
-
-.project-links {
-  display: flex;
-  gap: 0.7rem;
-  flex-wrap: wrap;
-}
+/* ── MEDIA COLUMN ── */
+.project-media { display: flex; flex-direction: column; gap: 0.8rem; }
 
 /* ── PROJECT IMAGES ── */
 .project-images {
@@ -302,117 +152,60 @@ section {
   object-position: top;
 }
 
-.img-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.8rem;
+/* ── VIDEO ── */
+.video-wrap {
+  position: relative; width: 100%; aspect-ratio: 16/9;
+  background: #000; border: 1px solid var(--border); overflow: hidden;
+}
+.video-wrap iframe, .video-wrap video {
+  position: absolute; inset: 0; width: 100%; height: 100%; border: none;
 }
 
-.img-grid img {
-  width: 100%;
-  aspect-ratio: 16/10;
-  object-fit: cover;
-  border: 1px solid var(--border);
-  display: block;
+/* ── CAROUSEL ── */
+.carousel { position: relative; width: 100%; border: 1px solid var(--border); overflow: hidden; background: var(--surface); }
+.carousel-track { display: flex; transition: transform 0.4s cubic-bezier(0.4,0,0.2,1); }
+.carousel-track img { width: 100%; flex-shrink: 0; display: block; object-fit: cover; aspect-ratio: 16/8.75; }
+.carousel-track img.portrait { aspect-ratio: 3/4; object-position: top; }
+
+.carousel-btn {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(13,13,15,0.75); border: 1px solid var(--border);
+  color: var(--text); width: 32px; height: 32px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; font-size: 14px; transition: background 0.2s;
+  z-index: 2; user-select: none; backdrop-filter: blur(4px);
 }
+.carousel-btn:hover { background: var(--accent); border-color: var(--accent); }
+.carousel-btn.prev { left: 0.5rem; }
+.carousel-btn.next { right: 0.5rem; }
+.carousel-btn.hidden { display: none; }
+
+.carousel-dots { display: flex; justify-content: center; gap: 0.4rem; padding: 0.5rem 0 0.4rem; background: var(--surface); }
+.carousel-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--border); cursor: pointer; transition: background 0.2s; }
+.carousel-dot.active { background: var(--accent); }
 
 /* ── ABOUT ── */
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-}
-
-.about-block h3 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.4rem;
-  letter-spacing: 0.05em;
-  color: var(--text);
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--border);
-}
-
-.about-block p {
-  font-family: 'Instrument Serif', serif;
-  font-size: 1rem;
-  color: var(--muted);
-  line-height: 1.8;
-  margin-bottom: 0.8rem;
-}
-
-.stat-row {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid var(--border);
-  font-size: 12px;
-}
-
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+.about-block h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 0.05em; color: var(--text); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+.about-block p { font-family: 'Instrument Serif', serif; font-size: 1rem; color: var(--muted); line-height: 1.8; margin-bottom: 0.8rem; }
+.stat-row { display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--border); font-size: 12px; }
 .stat-row span:first-child { color: var(--muted); }
 .stat-row span:last-child { color: var(--text); }
 
 /* ── CONTACT ── */
-.contact-section {
-  text-align: center;
-  padding: 6rem 3rem;
-  border-top: 1px solid var(--border);
-  background: var(--surface);
-}
-
-.contact-big {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(3rem, 8vw, 7rem);
-  letter-spacing: 0.02em;
-  color: var(--text);
-  line-height: 0.9;
-  margin: 1.5rem 0;
-}
-
-.contact-big a {
-  color: var(--accent);
-  text-decoration: none;
-  transition: opacity 0.2s;
-}
+.contact-section { text-align: center; padding: 6rem 3rem; border-top: 1px solid var(--border); background: var(--surface); }
+.contact-big { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3rem, 8vw, 7rem); letter-spacing: 0.02em; color: var(--text); line-height: 0.9; margin: 1.5rem 0; }
+.contact-big a { color: var(--accent); text-decoration: none; transition: opacity 0.2s; }
 .contact-big a:hover { opacity: 0.7; }
+.contact-links { display: flex; justify-content: center; gap: 1.5rem; margin-top: 2rem; flex-wrap: wrap; }
 
-.contact-links {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-top: 2rem;
-  flex-wrap: wrap;
-}
+footer { padding: 2rem 3rem; text-align: center; font-size: 11px; color: var(--muted); border-top: 1px solid var(--border); letter-spacing: 0.1em; }
 
-/* ── FOOTER ── */
-footer {
-  padding: 2rem 3rem;
-  text-align: center;
-  font-size: 11px;
-  color: var(--muted);
-  border-top: 1px solid var(--border);
-  letter-spacing: 0.1em;
-}
+/* ── ANIMATIONS ── */
+.fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
 
-/* ── SCROLL ANIMATIONS ── */
-.fade-in {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ── DIVIDER ── */
-.divider {
-  max-width: 1100px;
-  margin: 0 auto;
-  height: 1px;
-  background: var(--border);
-}
-
+/* ── RESPONSIVE ── */
 @media (max-width: 768px) {
   nav { padding: 1rem 1.5rem; }
   .nav-links { display: none; }
@@ -427,7 +220,6 @@ footer {
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <a class="nav-logo" href="#">UAU</a>
   <ul class="nav-links">
@@ -439,7 +231,6 @@ footer {
   </ul>
 </nav>
 
-<!-- HERO -->
 <div class="hero">
   <div class="hero-bg"></div>
   <div class="hero-gradient"></div>
@@ -457,7 +248,7 @@ footer {
   </div>
 </div>
 
-<!-- GAMES -->
+<!-- ═══════════════ GAMES ═══════════════ -->
 <section id="games">
   <p class="section-label">01 — Main projects</p>
   <h2 class="section-title">Games</h2>
@@ -470,7 +261,7 @@ footer {
       <span class="project-type">Roguelike · Endless Runner · Unity / C#</span>
       <p class="project-desc">
         A roguelike endless runner where the player alternates between dashing through a dungeon and fighting enemies, refining their build across each run.<br><br>
-        <b>My role was broad:</b> I designed and implemented the procedural level generation for the endless runner, the full progression system (active abilities, passives, light and heavy weapons), the game economy and the between-run events.
+        <b>My role was broad:</b> I designed and implemented the procedural level generation, the full progression system (active abilities, passives, light and heavy weapons), the game economy and the between-run events.
       </p>
       <div>
         <p class="skills-label">Skills applied</p>
@@ -489,8 +280,29 @@ footer {
         <a class="btn" href="https://github.com/Urkelele/EndlessFortress" target="_blank">GitHub</a>
       </div>
     </div>
-    <div class="project-images">
-      <img class="img-main portrait" src="images/EndlessFortress.png" alt="Endless Fortress">
+    <div class="project-media">
+      <div class="project-images">
+        <img class="img-main portrait" src="images/EndlessFortress.png"    alt="Endless Fortress — Key art">
+      </div>
+      <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/hBt32mrhv0U?si=hjvDy3bjNf7iJzNx"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+        </div>
+      <!--
+        CAROUSEL — Add one <img> per screenshot. Class "portrait" for vertical images.
+        To add more images just copy an <img> line inside the carousel-track div.
+      -->
+      <div class="carousel">
+        <div class="carousel-track">
+          <img src="images/EndlessFortress_02.png" alt="Endless Fortress — Screenshot 2">
+          <img src="images/EndlessFortress_03.png" alt="Endless Fortress — Screenshot 3">
+          <img src="images/EndlessFortress_04.png" alt="Endless Fortress — Screenshot 4">
+        </div>
+        <button class="carousel-btn prev">&#8592;</button>
+        <button class="carousel-btn next">&#8594;</button>
+        <div class="carousel-dots"></div>
+      </div>
     </div>
   </div>
 
@@ -521,8 +333,24 @@ footer {
         <a class="btn" href="https://github.com/eduardoVillar04/WildTides" target="_blank">GitHub</a>
       </div>
     </div>
-    <div class="project-images">
-      <img class="img-main portrait" src="images/WildTides.png" alt="Wild Tides">
+    <div class="project-media">
+      <div class="project-images">
+        <img class="img-main portrait" src="images/WildTides.png"    alt="Wild Tides — Cover art">
+      </div>
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/bHpJRh_eDEI?si=LG77AjftM09FRXWz"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+      </div>
+      <div class="carousel">
+        <div class="carousel-track">
+          <img src="images/WildTides_02.png" alt="Wild Tides — Screenshot 2">
+          <img src="images/WildTides_03.png" alt="Wild Tides — Screenshot 3">
+        </div>
+        <button class="carousel-btn prev">&#8592;</button>
+        <button class="carousel-btn next">&#8594;</button>
+        <div class="carousel-dots"></div>
+      </div>
     </div>
   </div>
 
@@ -552,13 +380,23 @@ footer {
         <a class="btn" href="https://github.com/eduardoVillar04/PapasClickeria_Web2025" target="_blank">GitHub</a>
       </div>
     </div>
-    <div class="project-images">
-      <img class="img-main portrait" src="images/Papa'sClickeria.png" alt="Papa's Clickeria">
+    <div class="project-media">
+      <div class="carousel">
+        <div class="carousel-track">
+          <img src="images/Papa'sClickeria_02.png" alt="Papa's Clickeria — Screenshot 2">
+          <img src="images/Papa'sClickeria_03.png" alt="Papa's Clickeria — Screenshot 3">
+          <img src="images/Papa'sClickeria_04.png" alt="Papa's Clickeria — Screenshot 4">
+          <img src="images/Papa'sClickeria_05.png" alt="Papa's Clickeria — Screenshot 5">
+        </div>
+        <button class="carousel-btn prev">&#8592;</button>
+        <button class="carousel-btn next">&#8594;</button>
+        <div class="carousel-dots"></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- PROTOTYPES -->
+<!-- ═══════════════ PROTOTYPES ═══════════════ -->
 <section id="prototypes">
   <p class="section-label">02 — Prototypes & Design</p>
   <h2 class="section-title">Prototypes</h2>
@@ -588,13 +426,20 @@ footer {
         <a class="btn" href="https://drive.google.com/drive/folders/10cIEqAke6WAxXXSKp9strx6zblIw3xVI?usp=drive_link" target="_blank">View on Drive</a>
       </div>
     </div>
-    <div class="project-images">
-      <img class="img-main" src="images/ForFame&Glory01.png" alt="For Fame & Glory Board">
-      <img class="img-main" src="images/ForFame&Glory02.png" alt="For Fame & Glory TTS">
+    <div class="project-media">
+      <div class="carousel">
+        <div class="carousel-track">
+          <img src="images/ForFame&Glory01.png" alt="For Fame & Glory — Physical board">
+          <img src="images/ForFame&Glory02.png" alt="For Fame & Glory — Tabletop Simulator">
+        </div>
+        <button class="carousel-btn prev">&#8592;</button>
+        <button class="carousel-btn next">&#8594;</button>
+        <div class="carousel-dots"></div>
+      </div>
     </div>
   </div>
 
-  <!-- Heart, the City Beneath TTRPG -->
+  <!-- Heart: The City Beneath -->
   <div class="project reverse fade-in">
     <div class="project-meta">
       <span class="project-number">005</span>
@@ -618,13 +463,21 @@ footer {
         <a class="btn" href="https://docs.google.com/document/d/1987OjzZmKVT3T9yJ1U8sSXjD2tNqcxYfSFL0cWCUwTE/edit?usp=sharing" target="_blank">View notes on Drive</a>
       </div>
     </div>
-    <div class="project-images">
-      <img class="img-main" src="images/HeartTheCityBeneath.png" alt="Heart: The City Beneath">
+    <div class="project-media">
+      <div class="carousel">
+        <div class="carousel-track">
+          <img src="images/HeartTheCityBeneath.png" alt="Heart: The City Beneath">
+          <!-- Add more images: session maps, NPC sheets, etc. -->
+        </div>
+        <button class="carousel-btn prev">&#8592;</button>
+        <button class="carousel-btn next">&#8594;</button>
+        <div class="carousel-dots"></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ART -->
+<!-- ═══════════════ ART ═══════════════ -->
 <section id="art">
   <p class="section-label">03 — Design & Art</p>
   <h2 class="section-title">Art</h2>
@@ -654,8 +507,18 @@ footer {
         <a class="btn" href="https://canva.link/9p9dvcca6nqoz6o" target="_blank">View on Canva</a>
       </div>
     </div>
-    <div class="project-images">
-      <img class="img-main" src="images/TheCursedSea.png" alt="The Cursed Sea">
+    <div class="project-media">
+      <div class="carousel">
+        <div class="carousel-track">
+          <img src="images/TheCursedSea.png"    alt="The Cursed Sea — Character sheet">
+          <img src="images/TheCursedSea_02.png" alt="The Cursed Sea — Characters">
+          <img src="images/TheCursedSea_03.png" alt="The Cursed Sea — World design">
+          <img src="images/TheCursedSea_05.png" alt="The Cursed Sea — Moodboard">
+        </div>
+        <button class="carousel-btn prev">&#8592;</button>
+        <button class="carousel-btn next">&#8594;</button>
+        <div class="carousel-dots"></div>
+      </div>
     </div>
   </div>
 
@@ -684,8 +547,20 @@ footer {
         <a class="btn" href="https://canva.link/aaeyxo2kpne57rb" target="_blank">View on Canva</a>
       </div>
     </div>
-    <div class="project-images">
-      <img class="img-main" src="images/YskarShardsofaTimePast.jpg" alt="Yskar: Shards of a Time Past">
+    <div class="project-media">
+      <div class="carousel">
+        <div class="carousel-track">
+          <img src="images/YskarShardsofaTimePast.jpg" alt="Yskar — World map">
+          <img src="images/YskarShardsofaTimePast_02.png" alt="Yskar — Values">
+          <img src="images/YskarShardsofaTimePast_03.png" alt="Yskar — Themes">
+          <img src="images/YskarShardsofaTimePast_04.png" alt="Yskar — Values and themes">
+          <img src="images/YskarShardsofaTimePast_05.png" alt="Yskar — Sketche">
+          <img src="images/YskarShardsofaTimePast_06.png" alt="Yskar — Idea / Lore / Style">
+        </div>
+        <button class="carousel-btn prev">&#8592;</button>
+        <button class="carousel-btn next">&#8594;</button>
+        <div class="carousel-dots"></div>
+      </div>
     </div>
   </div>
 
@@ -715,14 +590,25 @@ footer {
         <a class="btn" href="https://1drv.ms/p/c/5face5662beb6f85/IQBYAV5Ex_ExSqhyiXvU3nM-AW50yqV2IMBofakXtwnOa0Q?e=eIBdrM" target="_blank">Props Study</a>
       </div>
     </div>
-    <div class="project-images">
-      <img class="img-main" src="images/AnatomiyAnimacion.png" alt="Anatomy and Animation">
-      <img class="img-main" src="images/PropAvanzado.png" alt="Advanced Prop">
+    <div class="project-media">
+      <div class="carousel">
+        <div class="carousel-track">
+          <img src="images/AnatomiyAnimacion.png" alt="Anatomy and Animation">
+          <img src="images/PropAvanzado.png"       alt="Advanced Prop">
+          <img src="images/AnatomiyAnimacion_02.png" alt="Anatomy Studies">
+          <img src="images/AnatomiyAnimacion_03.png" alt="Animation Study">
+          <img src="images/AnatomiyAnimacion_04.png" alt="Anatomy Studies">
+          <img src="images/AnatomiyAnimacion_05.png" alt="Full Body Mesh">
+        </div>
+        <button class="carousel-btn prev">&#8592;</button>
+        <button class="carousel-btn next">&#8594;</button>
+        <div class="carousel-dots"></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
+<!-- ═══════════════ ABOUT ═══════════════ -->
 <section id="about">
   <p class="section-label">04 — Who I am</p>
   <h2 class="section-title">About me</h2>
@@ -740,12 +626,15 @@ footer {
       <div class="stat-row"><span>3D/2D Art</span><span>Blender, Krita, Photoshop</span></div>
       <div class="stat-row"><span>Video</span><span>DaVinci Resolve</span></div>
       <div class="stat-row"><span>Tools</span><span>GitHub, Trello, Notion, UML</span></div>
-      <div class="stat-row" style="flex-direction:column; gap:0.25rem;"><span>Languages</span><span style="color:var(--text);">Spanish (native) · English C1 · Basque B2 · German (intermediate)</span></div>
+      <div class="stat-row" style="flex-direction:column; gap:0.25rem;">
+        <span>Languages</span>
+        <span style="color:var(--text);">Spanish (native) · English C1 · Basque B2 · German (intermediate)</span>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
+<!-- ═══════════════ CONTACT ═══════════════ -->
 <div class="contact-section" id="contact">
   <p class="section-label" style="letter-spacing:0.2em;">05 — Let's talk</p>
   <div class="contact-big">
@@ -759,20 +648,65 @@ footer {
   </div>
 </div>
 
-<footer>
-  © 2026 Urko Aguillo Urarte — Game Designer & Developer
-</footer>
+<footer>© 2026 Urko Aguillo Urarte — Game Designer & Developer</footer>
 
 <script>
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('visible');
-    }
-  });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+// ── Scroll fade-in
+const fadeObserver = new IntersectionObserver(
+  entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+  { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+);
+document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
 
-document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+// ── Carousel
+document.querySelectorAll('.carousel').forEach(carousel => {
+  const track  = carousel.querySelector('.carousel-track');
+  const slides = Array.from(track.querySelectorAll('img'));
+  const prev   = carousel.querySelector('.carousel-btn.prev');
+  const next   = carousel.querySelector('.carousel-btn.next');
+  const dotsEl = carousel.querySelector('.carousel-dots');
+  let current  = 0;
+
+  // Build dots
+  slides.forEach((_, i) => {
+    const dot = document.createElement('div');
+    dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+    dot.addEventListener('click', () => goTo(i));
+    dotsEl.appendChild(dot);
+  });
+
+  // Hide controls when only one slide
+  if (slides.length <= 1) {
+    dotsEl.style.display = 'none';
+    prev.classList.add('hidden');
+    next.classList.add('hidden');
+  }
+
+  function goTo(index) {
+    current = (index + slides.length) % slides.length;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dotsEl.querySelectorAll('.carousel-dot').forEach((d, i) =>
+      d.classList.toggle('active', i === current));
+  }
+
+  prev.addEventListener('click', () => goTo(current - 1));
+  next.addEventListener('click', () => goTo(current + 1));
+
+  // Keyboard (when hovering)
+  carousel.setAttribute('tabindex', '0');
+  carousel.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft')  goTo(current - 1);
+    if (e.key === 'ArrowRight') goTo(current + 1);
+  });
+
+  // Touch / swipe
+  let startX = 0;
+  track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend',   e => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) goTo(current + (diff > 0 ? 1 : -1));
+  });
+});
 </script>
 </body>
 </html>
